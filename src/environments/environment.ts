@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://us-central1-quizengage.cloudfunctions.net/',
+  getRandomQuestions: 'getRandomQuestion',
+  getAnswers: 'getAnswers?cat=',
+
 };
 
 /*
