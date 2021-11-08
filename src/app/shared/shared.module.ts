@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -10,7 +11,8 @@ import { MaterialModule } from '../material/material.module';
   declarations: [NavBarComponent, FooterComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   exports: [
     NavBarComponent, 

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog/dialog';
 import { IQuizQuestions } from 'src/app/interfaces/iquiz-questions';
 import { QuizengageService } from 'src/app/services/quizengage.service';
 import { IQuizCategory } from '../../../interfaces/iquiz-catergory';
@@ -30,7 +30,7 @@ export class EasyQuizComponent implements OnInit {
 
   constructor(
     private quizengageservice: QuizengageService,
-    public dialog: MatDialog
+    // public dialog: MatDialog
   ) { }
 
   @Output() wrongAnswersCount = this.wrongAnswers;

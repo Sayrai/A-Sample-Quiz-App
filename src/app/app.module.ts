@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { QuizQuesionsModule } from './views/quiz-quesions/quiz-quesions.module';
 import { QuizengageService } from './services/quizengage.service';
+// import { MatDialogModule } from '@angular/material/dialog/dialog-module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { QuizengageService } from './services/quizengage.service';
     QuizQuesionsModule,
     MaterialModule,
     // HttpClient,
-    MaterialModule
+    MaterialModule,
+    // MatDialogModule
   ],
   providers: [HttpClient, QuizengageService],
   bootstrap: [AppComponent]

@@ -4,6 +4,8 @@ import {HttpClientTestingModule, HttpTestingController}
 import { QuizengageService } from './quizengage.service';
 import { IQuizQuestions } from '../interfaces/iquiz-questions';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MaterialModule } from '../material/material.module';
 
 export const mockQuiz: IQuizQuestions =  
 {
@@ -22,8 +24,12 @@ describe('QuizengageService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [QuizengageService],
-      imports: [HttpClientTestingModule,
-      HttpClientModule]
+      imports: [
+      HttpClientTestingModule,
+      HttpClientModule,
+      MatDialogModule,
+      MaterialModule
+    ]
     });
 
     httpTestingController = TestBed.inject(HttpTestingController);
@@ -50,5 +56,10 @@ describe('QuizengageService', () => {
 
     req.flush(mockQuiz);
   });
+
+  it('should have getCategoryList function', () => {
+    const service: QuizengageService = TestBed.inject(QuizengageService);
+    expect(service.getCategoryList).toBeTruthy();
+   });
 
 });

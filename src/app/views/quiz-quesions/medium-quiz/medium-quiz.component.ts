@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog';
 import { IQuizQuestions } from 'src/app/interfaces/iquiz-questions';
 import { QuizengageService } from 'src/app/services/quizengage.service';
 
@@ -20,7 +20,7 @@ export class MediumQuizComponent implements OnInit {
  
    constructor(
      private quizengageservice: QuizengageService,
-     public dialog: MatDialog
+    //  public dialog: MatDialog
    ) { }
  
    ngOnInit(): void {
