@@ -1,0 +1,21 @@
+<app-nav-bar></app-nav-bar>
+<!-- Question Card -->
+
+<!-- <div class="container"> -->
+<section class="content" role="main">
+    <div class="question-card">
+        <h4 class="question-text">Question{{ count }}</h4>
+
+        <p>{{ question }}</p>
+
+        <label id="example-radio-group-label">Choose your answer </label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            [(ngModel)]="favoriteSeason">
+            <mat-radio-button class="example-radio-button" *ngFor="let season of categoryList" [value]="season">
+                {{ season }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <div>The correct answer is: {{ favoriteSeason }}</div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "QuizEngageSarah"
+  "defaultProject": "QuizEngageSarah",
+  "cli": {
+    "analytics": "8775109d-7bbd-4466-9e39-7302ecf514b4"
+  }
 }
