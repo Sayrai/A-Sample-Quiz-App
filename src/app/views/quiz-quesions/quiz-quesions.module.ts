@@ -10,7 +10,6 @@ import { EasyQuizComponent } from './easy-quiz/easy-quiz.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 
 @NgModule({

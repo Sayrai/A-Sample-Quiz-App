@@ -53,38 +53,7 @@ export class GlobalHttpInterceptorServiceService implements HttpInterceptor {
       })
     );
   }
-  intercepts(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // For Testing purposes
-    console.log(request);
-
-    // Set headers for new request
-    if (request) {
-
-      request = this.addHeaderProperties(request);
-
-      // For Testing purposes
-      console.log("mutated", request);
-    }
-
-    // Then handle error
-    return next.handle(request).pipe(
-      retry(5),
-      catchError((error: HttpErrorResponse) => {
-        console.log("logging http error => ", error); // For testing purposes
-
-        let errorMessage = "";
-        if (error.error instanceof ErrorEvent) {
-          // client-side error
-          errorMessage = `Error: ${error.error.message}`;
-        } else {
-          // server-side error
-          errorMessage = `Error Code: ${error.status},  Message: ${error.message}`;
-        }
-        return throwError(errorMessage);
-      })
-    );
-  }
-
+ 
 
 
   private addHeaderProperties(request: HttpRequest<any>) : HttpRequest<any>{

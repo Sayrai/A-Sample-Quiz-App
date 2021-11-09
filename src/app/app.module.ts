@@ -10,11 +10,13 @@ import { MaterialModule } from './material/material.module';
 import { QuizQuesionsModule } from './views/quiz-quesions/quiz-quesions.module';
 import { QuizengageService } from './services/quizengage.service';
 import { GlobalHttpInterceptorServiceService } from './shared/interceptors/global-http-interceptor-service.service';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

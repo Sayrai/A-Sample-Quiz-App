@@ -27,49 +27,45 @@
   }
 }
 
-/* Style the counter cards */
-/* .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-  width: 244px;
-} */
+
 
 .level-text {
-  color: #2f4ced;
+  color: #d26159;
   font-weight: 500;
-  position: absolute;
-  top: 96px;
+  position: relative;
+  top: 131px;
+  right: 73px;
 }
 
 /* Animaion cards css */
 
 .hard {
-  --bg-color: #ffd861;
+  --bg-color: #ffaa47;
   --bg-color-light: #ffeeba;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(255, 215, 97, 0.48);
+  
 }
 
 .easy {
-  --bg-color: #b8f9d3;
-  --bg-color-light: #e2fced;
+  --bg-color: #d26159;
+  --bg-color-light: #eb6f66;
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(184, 249, 211, 0.48);
 }
 
 .medium {
-  --bg-color: #ceb2fc;
-  --bg-color-light: #f0e7ff;
+  --bg-color: #f2a287;
+  --bg-color-light: #f7beab;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(206, 178, 252, 0.48);
+  --box-shadow-color: var(--bg-color-light);
 }
 
 .card {
   width: 220px;
   height: 215px;
   background: #fff;
+  color: #d26159;
   border-top-right-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -80,6 +76,14 @@
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.level-text-primary{
+  z-index: 2;
+    margin-top: 17px;
+    color: #ffff;
+    font-weight: 600;
 }
 
 .column:hover {
