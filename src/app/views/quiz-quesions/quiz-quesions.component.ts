@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 // import { MatDialog } from '@angular/material/dialog';
 import { IQuizQuestions } from 'src/app/interfaces/iquiz-questions';
 import { QuizengageService } from 'src/app/services/quizengage.service';
@@ -11,7 +11,7 @@ import { QuizengageService } from 'src/app/services/quizengage.service';
 export class QuizQuesionsComponent implements OnInit {
 
 
-
+  @Input() isQuizComponent : boolean = false;
   constructor(
 
   ) { }

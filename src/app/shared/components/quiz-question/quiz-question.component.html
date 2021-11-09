@@ -20,9 +20,9 @@
 
         </mat-radio-group>
 
-        <ng-container *ngIf="optionSelected">
-            <div *ngIf="isCorrectAnswer">"Yay! Correct Answer"</div>
-            <div *ngIf="!isCorrectAnswer"> "WrongAnswer! Correct Answer is: {{quizAnswer}}</div>
+        <ng-container>
+            <div *ngIf="isCorrectAnswer && optionSelected">"Yay! Correct Answer"</div>
+            <div *ngIf="!isCorrectAnswer && optionSelected"> "WrongAnswer! Correct Answer is: {{quizAnswer}}</div>
         </ng-container>
 
         <button mat-raised-button (click)="getQuestions()">Next</button>

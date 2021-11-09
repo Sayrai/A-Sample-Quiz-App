@@ -37,6 +37,7 @@ export class QuizQuestionComponent implements OnInit {
   @Input('quizlevel') quizlevel: string = 'easy-quiz'
   @Output() wrongAnswersCount: number = 0;
   @Output() correctAnswersCount: number = 0;
+  
 
   ngOnInit(): void {
     this.getQuestions();

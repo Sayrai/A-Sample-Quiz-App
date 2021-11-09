@@ -1,30 +1,41 @@
-<app-nav-bar></app-nav-bar>
+<div class="topnav" role="banner">
 
+    <img width="40" alt="QuizEngange Logo" src="assets/images/logo.jpg" />
+
+    <span>QuizEngage</span>
+
+
+    <div class="spacer"></div>
+
+</div>
 
 <section class="content" role="main">
 
     <h3 class="level-text">Please select level type</h3>
     <div class="row">
         <div class="column easy">
-                         
+
             <div class="card" routerLink="/easy-quiz">
                 <div class="circle">
-    
-                    <i class="fas fa-grin-hearts"></i>   <h3 >EASY</h3>
-                </div>  
-               
+
+                    <i class="fas fa-grin-hearts"></i>
+                    <h3>EASY</h3>
+                </div>
+
             </div>
         </div>
 
         <div class="column medium">
-            <div class="card"  routerLink="/medium-quiz">
-                <i class="fas fa-grin-alt"></i>  <h3>MEDIUM</h3>
+            <div class="card" routerLink="/medium-quiz">
+                <i class="fas fa-grin-alt"></i>
+                <h3>MEDIUM</h3>
             </div>
         </div>
 
         <div class="column">
             <div class="card" routerLink="/hard-quiz">
-                <i class="fas fa-smile"></i> <h3 >HARD</h3>
+                <i class="fas fa-smile"></i>
+                <h3>HARD</h3>
 
             </div>
         </div>
