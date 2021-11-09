@@ -25,7 +25,7 @@ export class QuizengageService {
 
   async getCategoryList(category: string) {
     try {
-      //   https://us-central1-quizengage.cloudfunctions.net/getAnswers?cat={category}
+     
       const response = await this.httpClient
         .get<IQuizCategory[]>(
           `${environment.baseUrl}${environment.getAnswers}${category}`

@@ -23,13 +23,14 @@ describe('QuizengageService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [QuizengageService],
       imports: [
-      HttpClientTestingModule,
-      HttpClientModule,
-      MatDialogModule,
-      MaterialModule
-    ]
+        HttpClientTestingModule,
+        HttpClientModule,
+        MatDialogModule,
+        MaterialModule
+      ],
+      providers: [QuizengageService],
+    
     });
 
     httpTestingController = TestBed.inject(HttpTestingController);

@@ -4,8 +4,11 @@ import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from 'protractor';
 import { EasyQuizComponent } from './easy-quiz/easy-quiz.component';
-
+import { Location } from '@angular/common';
 import { QuizQuesionsComponent } from './quiz-quesions.component';
+import { HardQuizComponent } from './hard-quiz/hard-quiz.component';
+import { MediumQuizComponent } from './medium-quiz/medium-quiz.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('QuizQuesionsComponent', () => {
   let component: QuizQuesionsComponent;
@@ -13,7 +16,8 @@ describe('QuizQuesionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuizQuesionsComponent ],
+      declarations: [ QuizQuesionsComponent,HardQuizComponent, MediumQuizComponent, EasyQuizComponent ],
+      schemas: [NO_ERRORS_SCHEMA],
       imports: [HttpClientModule,RouterTestingModule.withRoutes([
         {path:"easy-quiz",
           component: EasyQuizComponent}
@@ -26,7 +30,7 @@ describe('QuizQuesionsComponent', () => {
     fixture = TestBed.createComponent(QuizQuesionsComponent);
     component = fixture.componentInstance;
     // router = TestBed.inject(Router);
-    location = TestBed.inject(Location);
+    // location = TestBed.inject(Location);
     fixture.detectChanges();
     // debugElement = fixture.debugElement;
   });
@@ -37,9 +41,9 @@ describe('QuizQuesionsComponent', () => {
 
   // it('should redirect to different quiz level', fakeAsync(() => {
 
-  //   component.quizLevel = [
-  //     // fill it with the different quiz level objects
-  //   ];
+  //   // component.quizLevel = [
+  //   //   // fill it with the different quiz level objects
+  //   // ];
 
   //   debugElement
   //     .query(By.css('.card'))
@@ -47,7 +51,7 @@ describe('QuizQuesionsComponent', () => {
   
   //   tick();
   
-  //   expect(location.path()).toBe("/easy-quiz");
+  //   expect(location.pathname).toBe("/easy-quiz");
   
   // }));
 });

@@ -4,19 +4,23 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { QuizQuestionComponent } from './components/quiz-question/quiz-question.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [NavBarComponent, FooterComponent],
+  declarations: [NavBarComponent, FooterComponent, QuizQuestionComponent],
   imports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     NavBarComponent, 
-    FooterComponent
+    FooterComponent,
+    QuizQuestionComponent
   ]
 })
 export class SharedModule { }

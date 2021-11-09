@@ -5,24 +5,30 @@
 
     <h3 class="level-text">Please select level type</h3>
     <div class="row">
-        <div class="column">
-            <div class="card">
-                <h3 routerLink="/easy-quiz">EASY</h3>
+        <div class="column easy">
+                         
+            <div class="card" routerLink="/easy-quiz">
+                <div class="circle">
+    
+                    <i class="fas fa-grin-hearts"></i>   <h3 >EASY</h3>
+                </div>  
+               
+            </div>
+        </div>
+
+        <div class="column medium">
+            <div class="card"  routerLink="/medium-quiz">
+                <i class="fas fa-grin-alt"></i>  <h3>MEDIUM</h3>
             </div>
         </div>
 
         <div class="column">
-            <div class="card">
-                <h3 routerLink="/medium-quiz">MEDIUM</h3>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="card">
-                <h3 routerLink="/hard-quiz">HARD</h3>
+            <div class="card" routerLink="/hard-quiz">
+                <i class="fas fa-smile"></i> <h3 >HARD</h3>
 
             </div>
         </div>
     </div>
 </section>
+
 <app-footer></app-footer>

@@ -23,7 +23,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    HttpClientTestingModule,
+  
   ]
 })
 export class QuizQuesionsModule { }
+ 

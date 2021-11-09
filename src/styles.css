@@ -17,8 +17,7 @@ body {
 
 .content {
   display: flex;
-  /* margin: 82px auto 32px; */
-  /* padding: 0 16px; */
+  overflow-y: scroll;
   max-width: 100%;
   min-width: 100%;
   flex-direction: column;
@@ -56,6 +55,10 @@ body {
 
 .example-radio-button {
   margin: 5px;
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: #0ee72f;
 }
 
 html, body { height: 100%; }

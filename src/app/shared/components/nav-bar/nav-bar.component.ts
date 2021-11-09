@@ -12,6 +12,6 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() correctAnswerCount! :string;
-  @Input() wrongAnswerCount! :string;
+  @Input() correctAnswerCount :number = 0;
+  @Input() wrongAnswerCount :number = 0;
 }
