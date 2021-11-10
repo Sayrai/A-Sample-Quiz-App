@@ -27,24 +27,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 # Sarah's Response
+## Looking forward to your the teams feedback.
 
-I had no idea the challenge was for 2hours would have opted to do it tomorrow, this is what I could come up with while commuting home(Bank closes 4pm WAT).
+
+## My thought process:
+1) Think on the implementation based on reusability (compomnents), maitainance and ease of use.
+2) Think of the navigation and UI aspect(colors, text, etc)
+3) The logic behind the implementation based on the requirements(easy, medium, hard levels) and the returned payload from getCategories.
+4) Can discus more
+
+## This was some what fun, thanks.
+
+Sarah. 
 
 
-My thought process:
-1) Thought about Design(UI), ease of use, navigation, adding reuasble components.
-2) first was to use State managemant library to store the data in state as opposed to using session storage since I would need to do a check after the user submits the answer(if its correct- "answerId" key that is being returned).
-3) Also add validation for the form input and then disable the button not to submit if the user hasn't inputted an answer in the form.
-
-# Things I would have loved to add given more time:
-1) Page loaders- for feedback
-2) When the user selects an answer, give them visual feedback whether the answer is correct or wrong and allow them to request the next question.
-3) Add a bit of colors to the quiz page
- 4) A score for the user to keep track of their correct and incorrect answers.
-5)Showing the user the correct answer if they chose the wrong one.
-6) Adding an http request interceptor to take care of the base API url.
-7) roper error handling in case of lost connection.
-8) Unit Test using karma(for the two endpoints)
 
 
 
