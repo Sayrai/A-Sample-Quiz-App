@@ -25,7 +25,7 @@ export class QuizQuestionComponent implements OnInit {
   easyQuiz!: IQuizCategory[];
 
   optionSelected = false;
-  loadingPage! : boolean;
+  loadingPage =true;
   constructor(
     private quizengageservice: QuizengageService,
     // public dialog: MatDialog
@@ -39,15 +39,15 @@ export class QuizQuestionComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.loadingPage= true;
+   
     this.getQuestions();
-    this.loadingPage= false;
+   
   }
 
 
 
   getQuestions() {
-
+    this.loadingPage= true;
     try {
 
       this.quizengageservice.getRandomQuestions().then((response) => {
@@ -55,7 +55,7 @@ export class QuizQuestionComponent implements OnInit {
         if (response) {
 
           this.quizQuestions = response;
-
+          this.loadingPage= false;
           // console.log(this.quizQuestions, 'questions');
 
           this.count++;
@@ -65,9 +65,9 @@ export class QuizQuestionComponent implements OnInit {
           this.categoryName = this.quizQuestions.category;
 
           this.quizAnswer = this.quizQuestions.answerId;
-
+   
           this.getCategoryList(this.categoryName);
-
+          
 
         } else {
 
