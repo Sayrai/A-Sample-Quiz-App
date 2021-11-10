@@ -12,7 +12,6 @@ export class QuizQuestionComponent implements OnInit {
 
 
   quizQuestions!: IQuizQuestions;
-  loading = true;
   question!: string;
   wrongAnswers: number = 0;
   correctAnswers: number = 0;
@@ -26,7 +25,7 @@ export class QuizQuestionComponent implements OnInit {
   easyQuiz!: IQuizCategory[];
 
   optionSelected = false;
-
+  loadingPage! : boolean;
   constructor(
     private quizengageservice: QuizengageService,
     // public dialog: MatDialog
@@ -40,7 +39,9 @@ export class QuizQuestionComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.loadingPage= true;
     this.getQuestions();
+    this.loadingPage= false;
   }
 
 
@@ -65,17 +66,12 @@ export class QuizQuestionComponent implements OnInit {
 
           this.quizAnswer = this.quizQuestions.answerId;
 
-          this.loading = false;
-
-          // this.shuffle(this.optionList);
-
           this.getCategoryList(this.categoryName);
 
-          // this.chooseAnswer(value, this.categoryName);
 
         } else {
 
-          // this.sweetAlertService.info(response.responseMessage);
+          // this.sweetAlertService.error("Error! Please contact quiz admin"));
 
         }
 
@@ -87,6 +83,22 @@ export class QuizQuestionComponent implements OnInit {
 
     }
 
+  }
+ 
+  
+
+  getNextQuestion(){
+
+    if(this.optionSelected && this.count > 0){
+      this.getQuestions();
+      this.optionSelected = false;
+      this.correctAnswer == undefined
+
+
+    } else{
+      alert('Please choose an option')
+    }
+    
   }
 
   getCategoryList(category: string) {

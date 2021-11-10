@@ -1,0 +1,30 @@
+@import '../../../views/quiz-quesions/quiz-quesions.component.css';
+
+.quiz-card{
+    background-color: #ffff;
+    width: 100%;
+    padding: 66px 42px;
+    transition: all 0.3s ease-out;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.38);
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+
+}
+
+@media(max-width:600px) {
+    .quiz-card{
+        margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;
+    }
+    body { 
+        font-size: 8px;
+    }
+
+    
+
+}
+
+
