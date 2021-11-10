@@ -6,7 +6,10 @@
         <h5> {{categoryName}}</h5>
         <h4 class="question-text">Question {{ count }} </h4>
 
-        <p>{{ question }} </p>
+        <div>
+            <p>{{ question }} </p>
+        </div>
+       
 
         <label id="example-radio-group-label">Choose your answer </label>
         <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
@@ -26,7 +29,7 @@
         </ng-container>
 
         <button mat-raised-button (click)="getQuestions()">Next</button>
-        <button mat-raised-button routerLink="/quiz-level">Back To Level</button>
+        <!-- <button mat-raised-button routerLink="/quiz-level">Back To Level</button> -->
 
     </div>
 </section>

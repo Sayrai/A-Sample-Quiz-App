@@ -36,20 +36,20 @@ body {
 }
 
 .question-card {
-  width: auto;
-  max-width: 60%;
-  height: auto;
-  position: absolute;
-  top: 13%;
-  left: 39%;
-  background-color: #ffff;
-  padding: 26px;
-  margin: -25px 0 0 -25px;
-  font-weight: 600;
-  box-shadow: 3px 3px 5px 6px #ccc;
-  white-space: nowrap;
-  color: rgba(0, 0, 0, 0.38);
-  border-radius:5px ;
+  /* width: auto;  */
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+    top: 14%;
+    /* left: 26%; */
+    background-color: #ffff;
+    padding: 26px;
+    margin: -25px 0 0 -25px;
+    font-weight: 600;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.38);
+    border-radius: 5px;
 }
 
 .question-text {
