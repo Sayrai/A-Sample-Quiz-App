@@ -43,12 +43,8 @@ My thought process:
  4) A score for the user to keep track of their correct and incorrect answers.
 5)Showing the user the correct answer if they chose the wrong one.
 6) Adding an http request interceptor to take care of the base API url.
-7) Store the users quiz performance persistently(using redux) so they can compare to earlier quiz sessions.
-8) roper error handling in case of lost connection.
-9) Unit Test using karma(for the two endpoints)
+7) roper error handling in case of lost connection.
+8) Unit Test using karma(for the two endpoints)
 
-# Challenge:
-1) Tested the second endpoint(https://us-central1-quizengage.cloudfunctions.net/getAnswers?cat={CITIES}) on postman returned using various categories: 
-"Category does not exist!"
 
 

@@ -9,21 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class GlobalHttpInterceptorServiceService implements HttpInterceptor {
 
 
-  private onlineEvent: Observable<Event>;
-  private offlineEvent: Observable<Event>;
-
-  constructor() {
-
-    this.onlineEvent = fromEvent(window, 'online');
-    this.offlineEvent = fromEvent(window, 'offline');
-
-    this.onlineEvent.subscribe(e => {
-      console.log('Application is Online');
-    });
-    this.offlineEvent.subscribe(e => {
-      console.log('Application is Offline');
-    });
-  }
+  constructor() {  }
 
 
 
@@ -71,28 +57,4 @@ export class GlobalHttpInterceptorServiceService implements HttpInterceptor {
 
 
 
-
-  private networkErrorScenario(error: HttpErrorResponse, request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (error instanceof HttpErrorResponse) {
-      const errorCode = (error as HttpErrorResponse).status;
-      switch (true) {
-        case (errorCode === 400):
-          return throwError(error);
-
-        case (errorCode === 401):
-          return throwError(error);
-
-        case (errorCode >= 500 && errorCode < 600):
-          return throwError(error);
-
-        case (errorCode === 0):
-          return throwError(error);
-
-        default:
-          return throwError(error);
-      }
-    } else {
-      return throwError(error);
-    }
-  }
 }
